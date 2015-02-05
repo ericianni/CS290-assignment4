@@ -7,8 +7,10 @@ End: 9:51:00
 Tasks: Setting up error checking in multtable.php. Can't figure out how to 
 check to see if something is a number other than (int).
 
-Start: 15:07:00
+Start: Feb 4, 15:07:00
 End: 16:30:00
 Tasks: Self admittedly spent too much time with CSS. Still unsure how to check
 for integers because my input fields are set to number so won't let the user
 submit without inputting a valid integer. Also intiated the git.
+
+Start: Feb 5, 07:30:00
