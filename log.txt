@@ -1,16 +1,23 @@
-Start 8:44:00
-End: 9:09:00
+Start: Wed, 4 Feb 2015 08:44:00 -0500
+End: Wed, 4 Feb 2015 09:09:00 -0500
 Tasks: Practicing sending values with GET.
 
-Start 9:32
-End: 9:51:00
+Start: Wed, 4 Feb 2015 09:32:00 -0500
+End: Wed, 4 Feb 2015 09:51:00 -0500
 Tasks: Setting up error checking in multtable.php. Can't figure out how to 
 check to see if something is a number other than (int).
 
-Start: Feb 4, 15:07:00
-End: 16:30:00
+Start: Wed, 4 Feb 2015 15:07:00 -0500
+End: Wed, 4 Feb 2015 16:30:00 -0500
 Tasks: Self admittedly spent too much time with CSS. Still unsure how to check
 for integers because my input fields are set to number so won't let the user
 submit without inputting a valid integer. Also intiated the git.
 
-Start: Feb 5, 07:30:00
+Start: Thur, 5 Feb 2015 07:30:00 -0500
+End: Thur, 5 Feb 2015 09:00:00 -0500
+Tasks: Added all the files to the commit. Still need to upload it to GitHub.
+Struggled a bit with the login/content1/content2 part. The lecture used a 
+link with a GET key/value to end the session. I was trying how to do that with
+POST and had a fourth page just to clear the session. I eventually just did it 
+with a GET called on login.php itself. Still don't understand headers too much.
+Needs more research.
