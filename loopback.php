@@ -9,9 +9,9 @@ ini_set('display_errors', 'On');
 </head>
 <body>
 <?php
-	if(isset($_SERVER['REQUEST_METHOD'])) {
-		$type = $_SERVER['REQUEST_METHOD'];
-	}
+if(isset($_SERVER['REQUEST_METHOD'])) {
+	$type = $_SERVER['REQUEST_METHOD'];
+	
 	if(!$_POST && !$_GET && ($type == "GET" || $type == "POST")) {
 		$empty = array('TYPE' => "[$type]", 'parameters' => null);
 		echo json_encode($empty);
@@ -28,6 +28,9 @@ ini_set('display_errors', 'On');
 			}
 		}
 	}
+} else {
+	echo "No Request Method detected, please try again.";
+}
 ?>
 </body>
 </html>
