@@ -12,13 +12,14 @@ ini_set('display_errors', 'On');
 	if(!$_POST && !$_GET) {
 		$empty = array('TYPE' => '[GET|POST]', 'parameters' => null);
 		echo json_encode($empty);
-	}
-	if(!$_POST) {
-		$json = array('TYPE' => '[GET]', 'parameters' => $_GET);
-		echo json_encode($json);
 	} else {
-		$json = array('TYPE' => '[POST]', 'parameters' => $_POST);
-		echo json_encode($json);
+		if(!$_POST) {
+			$json = array('TYPE' => '[GET]', 'parameters' => $_GET);
+			echo json_encode($json);
+		} else {
+			$json = array('TYPE' => '[POST]', 'parameters' => $_POST);
+			echo json_encode($json);
+		}
 	}
 ?>
 </body>
