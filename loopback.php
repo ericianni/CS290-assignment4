@@ -9,16 +9,23 @@ ini_set('display_errors', 'On');
 </head>
 <body>
 <?php
-	if(!$_POST && !$_GET) {
-		$empty = array('TYPE' => '[GET|POST]', 'parameters' => null);
+	if(isset($_SERVER['REQUEST_METHOD'])) {
+		$type = $_SERVER['REQUEST_METHOD'];
+	}
+	if(!$_POST && !$_GET && ($type == "GET" || $type == "POST")) {
+		$empty = array('TYPE' => "[$type]", 'parameters' => null);
 		echo json_encode($empty);
 	} else {
-		if(!$_POST) {
+		if($type == "GET") {
 			$json = array('TYPE' => '[GET]', 'parameters' => $_GET);
 			echo json_encode($json);
 		} else {
-			$json = array('TYPE' => '[POST]', 'parameters' => $_POST);
-			echo json_encode($json);
+			if($type == "POST") {
+				$json = array('TYPE' => '[POST]', 'parameters' => $_POST);
+				echo json_encode($json);
+			} else {
+				echo "Expecting either POST or GET. Can't handle request type: $type";
+			}
 		}
 	}
 ?>
