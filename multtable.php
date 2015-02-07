@@ -15,7 +15,7 @@ ini_set('display_errors', 'On');
 		echo "Missing parameter [min-multiplicand]<br />";
 		$valid = false;
 	} else {
-		if((int)$_GET['min-multiplicand'] == NULL) {
+		if(!is_int($_GET['min-multiplicand'] + 0) || !is_numeric($_GET['min-multiplicand'])) {
 			echo "[min-multiplicand] must be an integer<br />";
 			$valid = false;
 		} else {
@@ -27,7 +27,7 @@ ini_set('display_errors', 'On');
 		echo "Missing parameter [max-multiplicand]<br />";
 		$valid = false;
 	} else {
-		if((int)$_GET['max-multiplicand'] == NULL) {
+		if(!is_int($_GET['max-multiplicand'] + 0) || !is_numeric($_GET['max-multiplicand'])) {
 			echo "[max-multiplicand] must be an integer<br />";
 			$valid = false;
 		} else {
@@ -39,7 +39,7 @@ ini_set('display_errors', 'On');
 		echo "Missing parameter [min-multiplier]<br />";
 		$valid = false;
 	} else {
-		if((int)$_GET['min-multiplier'] == NULL) {
+		if(!is_int($_GET['min-multiplier'] + 0) || !is_numeric($_GET['min-multiplier'])) {
 			echo "[min-multiplier] must be an integer<br />";
 			$valid = false;
 		} else {
@@ -51,7 +51,7 @@ ini_set('display_errors', 'On');
 		echo "Missing parameter [max-multiplier]<br />";
 		$valid = false;
 	} else {
-		if((int)$_GET['max-multiplier'] == NULL) {
+		if(!is_int($_GET['min-multiplier'] + 0) || !is_numeric($_GET['max-multiplier'])) {
 			echo "[max-multiplier] must be an integer<br />";
 			$valid = false;
 		} else {
