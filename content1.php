@@ -43,9 +43,10 @@ if(!isset($_SESSION['correct']) && (!$_POST || $_POST['username'] === "")){
 			$_SESSION['correct'] = true;
 		}
 
-		$_SESSION['count']++;
+		
 		echo "Hello $_SESSION[username] you have visted this page [$_SESSION[count]] times. Click <a href=\"login.php?action=end\">here</a> to log out.<br /><br />";
 		echo "Here is a link to a very exciting page: <a href=\"content2.php\">content2.php</a>";
+		$_SESSION['count']++;
 	}
 }
 ?>
