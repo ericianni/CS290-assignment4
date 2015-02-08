@@ -1,4 +1,10 @@
 <?php
+/**
+ * This piece of code will display all errors/warnings and also
+ * handle a GET request with the parameter action = end
+ * This will signal login.php to log out the current user and
+ * reset the session.
+ */
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
